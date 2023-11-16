@@ -4,6 +4,9 @@ use std::{
 };
 
 use common_enums::enums::{Currency, RefundStatus};
+use common_utils::events::ApiEventMetric;
+
+use crate::analytics::MetricsResponse;
 
 #[derive(
     Clone,
@@ -175,3 +178,6 @@ pub struct RefundMetricsBucketResponse {
     #[serde(flatten)]
     pub dimensions: RefundMetricsBucketIdentifier,
 }
+
+impl ApiEventMetric for RefundMetricsBucketResponse {}
+impl ApiEventMetric for MetricsResponse<RefundMetricsBucketResponse> {}

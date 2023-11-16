@@ -10,7 +10,9 @@ pub mod enums;
 pub mod ephemeral_key;
 #[cfg(feature = "errors")]
 pub mod errors;
+pub mod events;
 pub mod files;
+pub mod gsm;
 pub mod mandates;
 pub mod organization;
 pub mod payment_methods;
@@ -18,5 +20,7 @@ pub mod payments;
 #[cfg(feature = "payouts")]
 pub mod payouts;
 pub mod refunds;
+pub mod routing;
+pub mod user;
 pub mod verifications;
 pub mod webhooks;
